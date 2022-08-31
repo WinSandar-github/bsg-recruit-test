@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="76x76" href="img/admin2.png">
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="plugins/register/css/style.css">
+    
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <title>会員詳細ページ</title>
+</head>
+<body>
+
+<div class="container">
+    
+        <div class="col-10 mt-4 mx-auto">
+            <div class="col-4">
+                <a href="member_create.html" class="link-primary">新規登録</a>&nbsp;
+                <a href="javascript:logout()" class="link-primary">ログアウト</a>
+            </div>
+            <h2 class="text-center mt-3">会員詳細ページ</h2>
+            <div class="mt-4">
+                <table class="table" id="tbl_member_detail">
+                    <tbody id="tbl_member_detail_body">
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+        <div class="mt-2 mb-2 row mx-auto">
+            <div class="col-5"></div>
+            <div class="col-4">
+                <input type="button" class="btn btn-dark" value="戻る" onclick="location.href='member_list.html'">&nbsp;
+                <input type="button" class="btn btn-primary" value="編集する" onclick="memberEdit();">&nbsp;
+            </div>
+        </div>
+</div>
+
+</body>
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
+
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+
+<script src="js/auth.js"></script>
+<script src="js/common.js"></script>
+<script src="js/member.js"></script>
+<script>
+    memberDetail();
+</script>
+</html>
